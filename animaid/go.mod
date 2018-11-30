@@ -1,1 +1,1 @@
-module git.sr.ht/~biosmarcel/animate/animate
+module git.sr.ht/~biosmarcel/animaid/animaid
