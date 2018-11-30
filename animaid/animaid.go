@@ -1,3 +1,4 @@
+//Package animaid contains the interface, datatypes and convenience methods for the AniMaid library.
 package animaid
 
 //Anime contains basic information about an Anime and contains all episodes.
@@ -32,7 +33,7 @@ func (anime *Anime) GetAmountOfEpisodes() int {
 func (anime *Anime) GetAmountOfAiredEpisodes() int {
 	var released int
 	for _, episode := range anime.episodes {
-		if episode.released {
+		if episode.aired {
 			released = released + 1
 		}
 	}
@@ -72,6 +73,16 @@ func (anime *Anime) GetReleaseState() ReleaseState {
 
 //Episode is a single Episode of an Anime.
 type Episode struct {
-	released bool
-	watched  bool
+	aired   bool
+	watched bool
+}
+
+//HasAired indicates wether this Episode has already been aired.
+func (episode *Episode) HasAired() bool {
+	return episode.aired
+}
+
+//IsWatched indicates wether the user has already watched this episode.
+func (episode *Episode) IsWatched() bool {
+	return episode.watched
 }
