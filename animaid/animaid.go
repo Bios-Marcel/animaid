@@ -1,4 +1,4 @@
-package animate
+package animaid
 
 type Anime struct {
 	episodes    map[int]Episode
