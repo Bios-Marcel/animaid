@@ -1,1 +1,1 @@
-module git.sr.ht/~biosmarcel/animaid/animaid
+module github.com/Bios-Marcel/animaid/animaid
